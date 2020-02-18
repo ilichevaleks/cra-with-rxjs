@@ -1,10 +1,31 @@
-import React from 'react'
-import Layout from '../components/common/Layout'
+import React, { useEffect } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { register, unregister } from 'serviceWorker'
+import routing from 'routing'
 
-const App = () => (
-    <Layout>
+import Layout from 'components/common/Layout'
 
-    </Layout>
-)
+const App = () => {
+  useEffect(() => {
+    register()
+    return () =>
+      unregister()
+  }, [])
+
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          {routing.map((route, index) => (
+            <Route
+              key={index}
+              {...route}
+            />
+          ))}
+        </Switch>
+      </Layout>
+    </BrowserRouter>
+  )
+}
 
 export default App

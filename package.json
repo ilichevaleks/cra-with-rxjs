@@ -2,6 +2,12 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -10,17 +16,17 @@
     "@types/node": "^12.12.27",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@types/react-router-dom": "^5.1.3",
+    "immer": "^5.3.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
-    "rxjs": "^6.5.4",
-    "typescript": "^3.7.5"
+    "rxjs": "^6.5.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "typescript": "^3.7.5"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,8 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "node-sass": "^4.13.1"
   }
 }
