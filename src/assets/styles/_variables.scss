@@ -1,0 +1,62 @@
+//////////
+// Grid //
+//////////
+
+$xs: 0px !default;
+$sm: 420px !default;
+$md: 600px !default;
+$lg: 960px !default;
+$xl: 1280px !default;
+
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl
+) !default;
+
+$grid-columns: 12 !default;
+
+////////////////
+// Flex props //
+////////////////
+
+$flex-direction: (
+  row,
+  row-reverse,
+  column,
+  column-reverse
+) !default;
+
+$flex-wrap: (
+  nowrap,
+  wrap,
+  wrap-reverse
+) !default;
+
+$align-items: (
+  flex-start,
+  center,
+  flex-end,
+  stretch,
+  baseline
+) !default;
+
+$align-content: (
+  stretch,
+  center,
+  flex-start,
+  flex-end,
+  space-between,
+  space-around
+) !default;
+
+$justify-content: (
+  flex-start,
+  center,
+  flex-end,
+  space-between,
+  space-around,
+  space-evenly,
+) !default;

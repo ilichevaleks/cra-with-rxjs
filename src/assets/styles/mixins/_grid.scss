@@ -1,0 +1,42 @@
+@mixin make-grid-container {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@mixin make-grid-gutter {
+  @for $factor from 1 through 10 {
+    &-spacing-#{$factor} {
+      margin: spacing(-$factor);
+    }
+
+    &-spacing-#{$factor} > &-item {
+      padding: spacing($factor);
+    }
+  }
+}
+
+@mixin make-grid-item($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  width: percentage($size / $columns);
+}
+
+@mixin make-grid-items($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+  .grid {
+    @include make-grid-container;
+    @include make-grid-gutter;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $width: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $width) {
+      @for $i from 1 through $columns {
+        .grid-#{$breakpoint}-#{$i} {
+          @include make-grid-item($i);
+        }
+      }
+    }
+  }
+}

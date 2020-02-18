@@ -1,0 +1,18 @@
+@import 'theme';
+
+.grid {
+  position: relative;
+  flex: 0 0 100%;
+
+  &-zero-min-width {
+    min-width: 0;
+  }
+
+  @include flex-direction;
+  @include flex-wrap;
+  @include align-items;
+  @include align-content;
+  @include justify-content;
+}
+
+@include make-grid-items();

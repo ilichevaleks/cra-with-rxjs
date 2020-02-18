@@ -1,0 +1,3 @@
+@function spacing($factor) {
+  @return 4px * $factor;
+}

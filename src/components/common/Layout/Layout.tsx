@@ -6,7 +6,7 @@ const Layout: FC = ({ children }) => (
   <div className="layout">
     <Header />
     <div className="layout-content">
-    {children}
+      {children}
     </div>
     <Footer />
   </div>

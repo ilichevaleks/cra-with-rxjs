@@ -1,0 +1,39 @@
+@mixin flex-direction {
+  @each $direction in $flex-direction {
+    &-direction-#{$direction} {
+      flex-direction: $direction;
+    }
+  }
+}
+
+@mixin flex-wrap {
+  @each $wrap in $flex-wrap {
+    &-wrap-#{$wrap} {
+      flex-wrap: $wrap;
+    }
+  }
+}
+
+@mixin align-items {
+  @each $align-items in $align-items {
+    &-align-items-#{$align-items} {
+      align-items: $align-items;
+    }
+  }
+}
+
+@mixin align-content {
+  @each $align-content in $align-content {
+    &-align-content-#{$align-content} {
+      align-content: $align-content;
+    }
+  }
+}
+
+@mixin justify-content {
+  @each $justify-content in $justify-content {
+    &-justify-#{$justify-content} {
+      justify-content: $justify-content;
+    }
+  }
+}
