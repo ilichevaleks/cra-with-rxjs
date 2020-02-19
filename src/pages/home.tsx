@@ -5,6 +5,7 @@ import { todoStore } from 'store'
 
 import PageLayout from 'components/common/PageLayout'
 import Container from 'components/common/Container'
+import Grid from 'components/common/Grid'
 
 const HomePage: FPC = () => {
   const todos = useStore(todoStore, todosSelector)
@@ -16,10 +17,16 @@ const HomePage: FPC = () => {
   return (
     <PageLayout>
       <Container>
-        <button type="button" onClick={handleClick}>Add todo</button>
-        {todos.map((todo, index) => (
-          <p key={index}>{todo.text}</p>
-        ))}
+        <Grid container>
+          <Grid item>
+            <button type="button" onClick={handleClick}>
+              Add todo
+            </button>
+            {todos.map((todo, index) => (
+              <p key={index}>{todo.text}</p>
+            ))}
+          </Grid>
+        </Grid>
       </Container>
     </PageLayout>
   )

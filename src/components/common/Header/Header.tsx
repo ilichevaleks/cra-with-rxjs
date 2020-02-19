@@ -4,6 +4,7 @@ import { todosLengthSelector } from 'store/todo.store'
 import { todoStore } from 'store'
 
 import Container from '../Container'
+import Grid from '../Grid'
 
 const Header = () => {
   const length = useStore(todoStore, todosLengthSelector)
@@ -11,7 +12,11 @@ const Header = () => {
   return (
     <header className="header">
       <Container>
-        Todos count: {length}
+        <Grid container>
+          <Grid item>
+            <p>Todos count: {length}</p>
+          </Grid>
+        </Grid>
       </Container>
     </header>
   )
