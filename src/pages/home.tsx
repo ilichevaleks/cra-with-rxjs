@@ -1,7 +1,10 @@
 import React, { useCallback } from 'react'
 import { useStore } from 'lib/rx-store'
-import { todosSelector } from 'store/todo.store'
 import { todoStore } from 'store'
+import {
+  todosSelector,
+  todosLengthSelector
+} from 'store/todo.store'
 
 import PageLayout from 'components/common/PageLayout'
 import Container from 'components/common/Container'
@@ -9,10 +12,12 @@ import Grid from 'components/common/Grid'
 
 const HomePage: FPC = () => {
   const todos = useStore(todoStore, todosSelector)
+  const length = useStore(todoStore, todosLengthSelector)
 
   const handleClick = useCallback(() => {
-    todoStore.addTodo('Todo ' + (todos.length + 1))
-  }, [todos])
+    const count = length + 1
+    todoStore.addTodo('Todo ' + count)
+  }, [length])
 
   return (
     <PageLayout>
