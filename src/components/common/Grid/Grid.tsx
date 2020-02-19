@@ -1,5 +1,5 @@
 import React, { forwardRef, ReactNode, ElementType } from 'react'
-import classNames from 'utils/classNames'
+import classNames from 'lib/classNames'
 
 export type GridItemsAlignment = 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'
 

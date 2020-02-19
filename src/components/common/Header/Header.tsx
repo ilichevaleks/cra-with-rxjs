@@ -1,5 +1,5 @@
 import React from 'react'
-import useStore from 'utils/useStore'
+import { useStore } from 'lib/rx-store'
 import { todoStore } from 'store'
 
 import Container from '../Container'

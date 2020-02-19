@@ -1,4 +1,4 @@
-import { RxState } from 'rx-state'
+import { RxState } from './rx-state'
 import { Draft } from 'immer'
 
 export class ImmutableStore<TState> {

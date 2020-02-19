@@ -1,4 +1,4 @@
-import { ImmutableStore } from 'immutable-store'
+import { ImmutableStore } from 'lib/rx-store'
 
 export interface Todo {
   readonly text: string;

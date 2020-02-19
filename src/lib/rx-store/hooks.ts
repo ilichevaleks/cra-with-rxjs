@@ -1,8 +1,8 @@
 import { useRef, useEffect, useState } from 'react'
-import { ImmutableStore } from 'immutable-store'
+import { ImmutableStore } from 'lib/rx-store'
 import shallowEqual from 'shallowequal'
 
-export default function useStore<TState, TResult>(
+export function useStore<TState, TResult>(
   store: ImmutableStore<TState>,
   project: (store: TState) => TResult,
 ): TResult {

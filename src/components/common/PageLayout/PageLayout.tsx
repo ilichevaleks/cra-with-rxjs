@@ -1,5 +1,5 @@
 import React, { forwardRef, HTMLAttributes } from 'react'
-import classNames from 'utils/classNames'
+import classNames from 'lib/classNames'
 
 export interface PageLayoutProps extends HTMLAttributes<HTMLDivElement> {}
 
