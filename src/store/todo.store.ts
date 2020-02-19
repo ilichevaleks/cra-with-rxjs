@@ -16,6 +16,14 @@ export interface TodoStoreState {
   visibilityFilter: VisibilityFilter
 }
 
+export function todosSelector(state: Readonly<TodoStoreState>) {
+  return state.todos
+}
+
+export function todosLengthSelector(state: Readonly<TodoStoreState>) {
+  return state.todos.length
+}
+
 export class TodoStore extends ImmutableStore<TodoStoreState> {
   constructor() {
     super({

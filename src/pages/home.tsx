@@ -1,18 +1,17 @@
-import React, { useState, useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { useStore } from 'lib/rx-store'
+import { todosSelector } from 'store/todo.store'
 import { todoStore } from 'store'
 
 import PageLayout from 'components/common/PageLayout'
 import Container from 'components/common/Container'
 
 const HomePage: FPC = () => {
-  const [count, setCount] = useState(0)
-  const todos = useStore(todoStore, state => state.todos)
+  const todos = useStore(todoStore, todosSelector)
 
   const handleClick = useCallback(() => {
-    setCount(count + 1)
-    todoStore.addTodo('Todo ' + count)
-  }, [count])
+    todoStore.addTodo('Todo ' + (todos.length + 1))
+  }, [todos])
 
   return (
     <PageLayout>

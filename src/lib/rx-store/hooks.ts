@@ -4,7 +4,7 @@ import shallowEqual from 'shallowequal'
 
 export function useStore<TState, TResult>(
   store: ImmutableStore<TState>,
-  project: (store: TState) => TResult,
+  project: (state: TState) => TResult,
 ): TResult {
   const projectRef = useRef(project)
   useEffect(() => {
